@@ -4,6 +4,8 @@ import Modal from "../components/Modal";
 import HabitsModal from "../components/HabitsModal";
 import EditingModal from "../components/EditingModal";
 import { ACTIONS } from "../utils/ACTIONS";
+import { FaFileArchive } from "react-icons/fa";
+import { RiDeleteBin2Fill } from "react-icons/ri";
 
 export default function Home() {
   const {
@@ -28,23 +30,23 @@ export default function Home() {
         {habitsList.map((habit) => (
           <div
             key={habit._id}
-            className="items-center bg-slate-800 p-4 m-4 w-max rounded shadow-md"
+            className="items-center bg-slate-800 p-4 m-4 w-[15rem] rounded shadow-md"
           >
             <HabitsModal title={habit.name} habitData={habit} />
 
-            <div className="text-center mt-4 flex items-center">
+            <div className="text-center mt-4 flex items-center justify-evenly">
               <EditingModal inputReceived={habit} />
               <button
                 className="mx-4 border border-black font-bold bg-gray-50 p-1 hover:bg-black hover:text-white"
                 onClick={() => handleArchive(habit)}
               >
-                Archive
+                <FaFileArchive size={"1.5rem"} />
               </button>
               <button
                 className="border border-black font-bold hover:bg-black hover:text-white bg-gray-50 p-1"
                 onClick={() => handleDelete(habit)}
               >
-                Delete
+                <RiDeleteBin2Fill size={"1.5rem"} />
               </button>
             </div>
           </div>

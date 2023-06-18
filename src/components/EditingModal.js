@@ -3,6 +3,7 @@ import { Fragment, useState } from "react";
 import { useImmer } from "use-immer";
 import { useData } from "../context/dataContext";
 import { ACTIONS } from "../utils/ACTIONS";
+import { AiTwotoneEdit } from "react-icons/ai";
 
 export default function EditingModal({ inputReceived }) {
   const { dataDispatch } = useData();
@@ -36,7 +37,7 @@ export default function EditingModal({ inputReceived }) {
         onClick={openModal}
       >
         <button className="border border-black font-bold bg-gray-50 hover:bg-black hover:text-white p-1">
-          Edit
+          <AiTwotoneEdit size={"1.5rem"} />
         </button>
       </div>
 
