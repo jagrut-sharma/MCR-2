@@ -23,8 +23,12 @@ export default function Home() {
 
   return (
     <div className="font-Libre">
-      <h2 className="text-2xl m-4 text-center">Current habits</h2>
+      <h2 className="text-3xl font-bold m-4 text-center">Current habits</h2>
       <Modal />
+
+      {habitsList.length === 0 && (
+        <p className="text-center text-xl mt-8">Start tracking your habits</p>
+      )}
 
       <div className="flex flex-col items-center">
         {habitsList.map((habit) => (
