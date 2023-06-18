@@ -34,6 +34,7 @@ export default function Modal() {
   };
 
   const handleSave = () => {
+    if (inputData.name === "") return;
     dataDispatch({ type: ACTIONS.ADD_HABIT, payload: inputData });
     closeModal();
     setInputData({

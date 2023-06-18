@@ -26,6 +26,7 @@ export default function EditingModal({ inputReceived }) {
   };
 
   const handleSave = () => {
+    if (inputData.name === "") return;
     dataDispatch({ type: ACTIONS.EDIT_HABIT, payload: inputData });
     closeModal();
   };
