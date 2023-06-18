@@ -101,6 +101,7 @@ export default function Modal() {
                       name="name"
                       value={inputData.name}
                       onChange={handleChange}
+                      required
                     />
 
                     <div className="flex mt-2 justify-between">

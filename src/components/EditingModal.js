@@ -85,6 +85,7 @@ export default function EditingModal({ inputReceived }) {
                       name="name"
                       value={inputData.name}
                       onChange={handleChange}
+                      required
                     />
 
                     <div className="flex mt-2 justify-between">
