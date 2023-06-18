@@ -37,13 +37,13 @@ export default function Home() {
             <div className="text-center mt-4 flex items-center justify-evenly">
               <EditingModal inputReceived={habit} />
               <button
-                className="mx-4 border border-black font-bold bg-gray-50 p-1 hover:bg-black hover:text-white"
+                className="mx-4 border border-black font-bold bg-gray-50 p-1 hover:bg-black hover:text-white rounded-md"
                 onClick={() => handleArchive(habit)}
               >
                 <FaFileArchive size={"1.5rem"} />
               </button>
               <button
-                className="border border-black font-bold hover:bg-black hover:text-white bg-gray-50 p-1"
+                className="border border-black font-bold hover:bg-black hover:text-white bg-gray-50 p-1 rounded-md"
                 onClick={() => handleDelete(habit)}
               >
                 <RiDeleteBin2Fill size={"1.5rem"} />

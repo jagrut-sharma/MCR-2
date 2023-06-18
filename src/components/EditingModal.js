@@ -36,7 +36,7 @@ export default function EditingModal({ inputReceived }) {
         className="cursor-pointer rounded-full flex items-center w-max"
         onClick={openModal}
       >
-        <button className="border border-black font-bold bg-gray-50 hover:bg-black hover:text-white p-1">
+        <button className="border border-black font-bold bg-gray-50 hover:bg-black hover:text-white p-1 rounded-md">
           <AiTwotoneEdit size={"1.5rem"} />
         </button>
       </div>
