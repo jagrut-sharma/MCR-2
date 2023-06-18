@@ -1,11 +1,28 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
+import Home from "./pages/Home";
+import RootLayout from "./pages/RootLayout";
+import Archive from "./pages/Archive";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "/archive",
+        element: <Archive />,
+      },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <div className="App">
-      <h1 className="text-3xl font-bold">Testing</h1>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
